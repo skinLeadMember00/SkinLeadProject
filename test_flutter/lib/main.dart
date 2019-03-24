@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
 //
 //    );
 
-
     return new MaterialApp(
         title: "",
         //      home: new Text("Add Google fonts to Flutter App")
