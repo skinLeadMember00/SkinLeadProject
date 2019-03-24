@@ -31,7 +31,6 @@ class MyApp extends StatelessWidget {
       itemCount: _suggestions.length,
     );
 
-
     final sizedBox = new Container(
       margin: new EdgeInsets.only(left: 20, right: 20),
       child: new SizedBox(
@@ -57,6 +56,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 
 
 
