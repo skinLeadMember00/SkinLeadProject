@@ -10,77 +10,42 @@ class MyApp extends StatelessWidget {
     final _suggestions = <WordPair>[];
     _suggestions.addAll(generateWordPairs().take(10));
 
-    var list = ListView.builder(
-      itemBuilder: (context, position)
-      {
-        return Column(
-          children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>
-              [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding:
-                      const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 6.0),
-                      child: Text(
-                        _suggestions[position].asPascalCase,
-                        style: TextStyle(
-                            fontSize: 22.0, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                      const EdgeInsets.fromLTRB(12.0, 6.0, 12.0, 12.0),
-                      child: Text(
-                        _suggestions[position].asPascalCase,
-                        style: TextStyle(fontSize: 18.0),
-                      ),
-                    ),
-                  ],
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text(
-                        "5m",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Divider(
-              height: 2.0,
-              color: Colors.grey,
-            )
-          ],
+
+              new Divider(color: Colors.blue, indent: 16.0,),
+            ],
+          ),
         );
       },
       itemCount: _suggestions.length,
     );
 
 
-    return new MaterialApp
-      (
+
+    final sizedBox = new Container(
+      margin: new EdgeInsets.only(left: 20, right: 20),
+      child: new SizedBox(
+        //height: 220.0,
+        child: card,
+
+      ),
+    );
+    final center = new Center(
+      child: sizedBox,
+
+    );
+
+    return new MaterialApp(
         title: "",
+        //      home: new Text("Add Google fonts to Flutter App")
         home: new Scaffold(appBar: new AppBar(
             title: new Text("Card example")
         ),
-
-          body: list,
-          backgroundColor: Colors.white,
+          body: center,
+          backgroundColor: Colors.indigo,
         )
     );
   }
-
 }
-
 
 
 
