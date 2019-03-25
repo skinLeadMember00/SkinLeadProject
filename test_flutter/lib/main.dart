@@ -10,21 +10,16 @@ class MyApp extends StatelessWidget {
     final _suggestions = <WordPair>[];
     _suggestions.addAll(generateWordPairs().take(10));
 
-    return new MaterialApp
-      (
         title: "",
+        //      home: new Text("Add Google fonts to Flutter App")
         home: new Scaffold(appBar: new AppBar(
             title: new Text("Card example")
         ),
 
-//          body: list,
-          backgroundColor: Colors.white,
         )
     );
   }
-
 }
-
 
 
 
